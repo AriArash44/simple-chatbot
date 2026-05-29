@@ -24,7 +24,6 @@ def build_processed_dataset(dataset):
             for utt in row["utterances"]:
                 history = " ".join(utt["history"])
                 answer = utt["candidates"][0]
-
                 sample = {
                     "prompt": f"Persona: {persona}\nHistory: {history}\nResponse:",
                     "completion": f" {answer}"
